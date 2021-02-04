@@ -4,7 +4,9 @@ class FilteredList extends Component {
     render() {
         return (
             <ul>
-                <li>More list items will go here!</li>
+                {this.props.filteredList.map((fruit, i) => {
+                    return <li key={`key is ${i}`}>{fruit}</li>
+                })}
             </ul>
         )
     }

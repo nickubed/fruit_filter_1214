@@ -10,8 +10,12 @@ class FruitContainer extends Component {
 
     handleUserInput = (event) => {
         let newInput = event.target.value
+        let filterBoi = this.props.fruits.filter(fruit => {
+            return fruit.includes(newInput)
+        })
         this.setState({
-            userInput: newInput
+            userInput: newInput,
+            filteredList: filterBoi
         })
     }
 
